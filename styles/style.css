@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/***********************************
+              共通css
+************************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* ブラウザーのデフォルトの文字サイズ(16px)やユーザーが設定した文字サイズが正しく反映される */
+  font-size: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  /* 画像が親要素よりも大きくなることを防ぐ */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wrapper {
+  /* 画面中央に寄せる */
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sm-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center right;
+}
+
+/* 文字を太くする */
+.fw-bold {
+  font-weight: bold;
+}
+
+/* 横並び */
+.flex, .header, .site-logo, #home.big-bg .captions, .commitment, #main-content .treatment-content .treatment-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* 縦書きモード */
+.caption, #home.big-bg .caption-1, #home.big-bg .caption-2 {
+  background-color: #ffffff;
+  height: 565px;
+  width: 102px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.caption-text, #home.big-bg .caption-1 p, #home.big-bg .caption-2 p {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  letter-spacing: 4px;
+}
+
+.content-title, .commitment .writting .commitment-title, #main-content .treatment-content .treatment-title {
+  display: inline-block;
+  font-size: 1.5rem;
+  border-bottom: 10px solid #99e5a5;
+  line-height: 0.5;
+}
+
+#global-container {
+  background-color: #ffffff;
+}
+
+/***********************************
+              ヘッダー
+************************************/
+.header {
+  height: 130px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-logo {
+  width: 263px;
+  height: 73px;
+}
+
+.site-logo > img {
+  width: 263px;
+  height: 73px;
+}
+
+.header-contact .reception {
+  margin-bottom: 18px;
+  font-size: 0.875rem;
+}
+
+.header-contact .phone-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header-contact .phone-number > img {
+  margin-right: 15px;
+  width: 24px;
+  height: 24px;
+}
+
+.header-contact .phone-number .number {
+  color: #21a937;
+  font-size: 1.5rem;
+  line-height: 24px;
+}
+
+/***********************************
+            ホームイメージ
+************************************/
+#home.big-bg {
+  background-image: url(../../images/home-image.jpg);
+  min-height: 947px;
+  position: relative;
+}
+
+#home.big-bg .captions {
+  position: absolute;
+  top: 133px;
+  left: 220px;
+}
+
+#home.big-bg .caption-1 {
+  position: relative;
+}
+
+#home.big-bg .caption-1 p span {
+  color: #21a937;
+}
+
+#home.big-bg .caption-2 {
+  margin-left: 80px;
+  position: relative;
+}
+
+/***********************************
+                公約
+************************************/
+.commitment {
+  padding: 162px 0 82px 0;
+}
+
+.commitment .writting {
+  padding-left: 32px;
+  width: 415px;
+  height: 138px;
+}
+
+.commitment .writting .commitment-title {
+  margin-bottom: 40px;
+}
+
+.commitment .writting .commitment-title:nth-child(1) {
+  padding-right: 8px;
+}
+
+.commitment img {
+  width: 690px;
+  height: 420px;
+}
+
+/***********************************
+            メインコンテンツ
+************************************/
+#main-content {
+  background-color: #f5fcf8;
+  padding: 85px 0 112px 0;
+}
+
+#main-content .treatment-content {
+  text-align: center;
+}
+
+#main-content .treatment-content .treatment-title {
+  margin-bottom: 79px;
+}
+
+#main-content .treatment-content p {
+  margin-bottom: 37px;
+}
+
+#main-content .treatment-content .treatment-details article {
+  background-color: #ffffff;
+  padding: 47px 30px 0 30px;
+  height: 544px;
+  border: 2px solid #c9c9c9;
+  border-radius: 10px;
+  position: relative;
+}
+
+#main-content .treatment-content .treatment-details article .article-title {
+  margin-bottom: 38px;
+  line-height: 1;
+}
+
+#main-content .treatment-content .treatment-details article .article-sentence {
+  text-align: left;
+  line-height: 38px;
+}
+
+#main-content .treatment-content .treatment-details article > img {
+  position: absolute;
+  width: 187px;
+  height: 187px;
+  bottom: 0;
+  left: 25%;
+}
+/*# sourceMappingURL=style.css.map */

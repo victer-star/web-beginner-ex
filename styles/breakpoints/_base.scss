@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+/***********************************
+              共通css
+************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* ブラウザーのデフォルトの文字サイズ(16px)やユーザーが設定した文字サイズが正しく反映される */
+  font-size: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  /* 画像が親要素よりも大きくなることを防ぐ */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wrapper {
+  /* 画面中央に寄せる */
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sm-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center right;
+}
+
+/* 文字を太くする */
+.fw-bold {
+  font-weight: bold;
+}
+
+/* 横並び */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 縦書きモード */
+.caption {
+  background-color: $cWhite;
+  height: 565px;
+  width: 102px;
+  writing-mode: vertical-rl;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.caption-text {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  letter-spacing: 4px;
+}
+
+.content-title {
+  display: inline-block;
+  font-size: 1.5rem;
+  border-bottom: 10px solid $cLightGreenUnderline;
+  line-height: 0.5;
+}
+
+#global-container {
+  background-color: $cWhite;
+}
+
+/***********************************
+              ヘッダー
+************************************/
+.header {
+  @extend .flex;
+  height: 130px;
+  align-items: center;
+}
+
+.site-logo {
+  @extend .flex;
+  width: 263px;
+  height: 73px;
+
+  & > img {
+    width: 263px;
+    height: 73px;
+  }
+}
+
+.header-contact {
+  & .reception {
+    margin-bottom: 18px;
+    font-size: 0.875rem;
+  }
+
+  & .phone-number {
+    display: flex;
+    justify-content: flex-end;
+
+    & > img {
+      margin-right: 15px;
+      width: 24px;
+      height: 24px;
+    }
+
+    & .number {
+      color: $cLightGreen;
+      font-size: 1.5rem;
+      line-height: 24px;
+    }
+  }
+}
+
+/***********************************
+            ホームイメージ
+************************************/
+#home.big-bg {
+  background-image: url(../../images/home-image.jpg);
+  min-height: 947px;
+  position: relative;
+
+  & .captions {
+    @extend .flex;
+    position: absolute;
+    top: 133px;
+    left: 220px;
+  }
+
+  & .caption-1 {
+    @extend .caption;
+    position: relative;
+
+    & p {
+      @extend .caption-text;
+
+      & span {
+        color: $cLightGreen;
+      }
+    }
+  }
+
+  & .caption-2 {
+    @extend .caption;
+    margin-left: 80px;
+    position: relative;
+
+    & p {
+      @extend .caption-text;
+    }
+  }
+}
+
+/***********************************
+                公約
+************************************/
+.commitment {
+  @extend .flex;
+  padding: 162px 0 82px 0;
+
+  & .writting {
+    padding-left: 32px;
+    width: 415px;
+    height: 138px;
+
+    & .commitment-title {
+      @extend .content-title;
+      margin-bottom: 40px;
+
+      &:nth-child(1) {
+        padding-right: 8px;
+      }
+    }
+  }
+
+  & img {
+    width: 690px;
+    height: 420px;
+  }
+}
+
+/***********************************
+            メインコンテンツ
+************************************/
+#main-content {
+  background-color: $cBgColor;
+  padding: 85px 0 112px 0;
+
+  // 治療内容 //
+  & .treatment-content {
+    text-align: center;
+
+    & .treatment-title {
+      @extend .content-title;
+      margin-bottom: 79px;
+    }
+
+    & p {
+      margin-bottom: 37px;
+    }
+
+    & .treatment-details {
+      @extend .flex;
+
+      & article {
+        background-color: $cWhite;
+        padding: 47px 30px 0 30px;
+        height: 544px;
+        border: 2px solid #c9c9c9;
+        border-radius: 10px;
+        position: relative;
+
+        & .article-title {
+          margin-bottom: 38px;
+          line-height: 1;
+        }
+
+        & .article-sentence {
+          text-align: left;
+          line-height: 38px;
+        }
+
+        & > img {
+          position: absolute;
+          width: 187px;
+          height: 187px;
+          bottom: 0;
+          left: 25%;
+        }
+      }
+    }
+  }
+}
