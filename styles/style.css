@@ -18,6 +18,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #444444;
 }
 
 img {
@@ -30,7 +31,6 @@ img {
   /* 画面中央に寄せる */
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .sm-wrapper {
@@ -45,12 +45,12 @@ img {
 }
 
 /* 文字を太くする */
-.fw-bold {
+.fw-bold, #main-content .news .news-content .news-list li .news-date, #main-content .news .news-content .news-list li .news-sentence, #main-content .news .news-content .more-news {
   font-weight: bold;
 }
 
 /* 横並び */
-.flex, .header, .site-logo, #home.big-bg .captions, .commitment, #main-content .treatment-content .treatment-details {
+.flex, .header, .site-logo, #home.big-bg .captions, .commitment, #main-content .treatment-content .treatment-details, .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,11 +78,19 @@ img {
   letter-spacing: 4px;
 }
 
-.content-title, .commitment .writting .commitment-title, #main-content .treatment-content .treatment-title {
+.content-title, .commitment .writting .commitment-title, #main-content .treatment-content .treatment-title, #main-content .news .text-align-center .news-title {
   display: inline-block;
   font-size: 1.5rem;
   border-bottom: 10px solid #99e5a5;
   line-height: 0.5;
+}
+
+.content-box, #main-content .treatment-content .treatment-details article {
+  border-radius: 10px;
+}
+
+.border, .content-box, #main-content .treatment-content .treatment-details article {
+  border: 2px solid #c9c9c9;
 }
 
 #global-container {
@@ -195,6 +203,8 @@ img {
 #main-content {
   background-color: #f5fcf8;
   padding: 85px 0 112px 0;
+  /*------------- 治療内容 --------------*/
+  /*------------- おしらせ --------------*/
 }
 
 #main-content .treatment-content {
@@ -213,8 +223,6 @@ img {
   background-color: #ffffff;
   padding: 47px 30px 0 30px;
   height: 544px;
-  border: 2px solid #c9c9c9;
-  border-radius: 10px;
   position: relative;
 }
 
@@ -234,5 +242,173 @@ img {
   height: 187px;
   bottom: 0;
   left: 25%;
+}
+
+#main-content .news {
+  margin-top: 89px;
+}
+
+#main-content .news .text-align-center {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+#main-content .news .news-content {
+  background-color: #ffffff;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  position: relative;
+}
+
+#main-content .news .news-content .news-list {
+  list-style: none;
+  padding: 22.5px 66px 44.5px 66px;
+}
+
+#main-content .news .news-content .news-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 26.5px 0 20.5px 0;
+}
+
+#main-content .news .news-content .news-list li .news-date {
+  margin-right: 37px;
+  color: #21a937;
+}
+
+#main-content .news .news-content .news-list li .news-title-box {
+  position: relative;
+  margin-right: 30px;
+  background-color: #444444;
+  color: #ffffff;
+  width: 80px;
+  height: 25px;
+  font-size: 0.75rem;
+}
+
+#main-content .news .news-content .news-list li .news-title-box p {
+  line-height: 1;
+  text-align: center;
+  padding-top: 7px;
+}
+
+#main-content .news .news-content .more-news {
+  text-align: right;
+  cursor: pointer;
+  margin-top: 44.5px;
+}
+
+#main-content .news .news-content .more-news span {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 10px;
+  border-color: transparent transparent transparent #444444;
+}
+
+/***********************************
+              フッター
+************************************/
+.footer-content {
+  padding: 196px 0 164px 0;
+}
+
+.footer-content .clinic-location {
+  margin-right: 34px;
+}
+
+.footer-content .clinik-about {
+  width: 533px;
+}
+
+.footer-content .clinik-about .address-content {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.footer-content .phone-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 36px 0 29.5px 0;
+}
+
+.footer-content .phone-number > img {
+  margin-right: 15px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-content .phone-number .number {
+  color: #21a937;
+  font-size: 1.5rem;
+  line-height: 24px;
+}
+
+.footer-content .business-about {
+  border-top: 2px solid #c9c9c9;
+  border-bottom: 2px solid #c9c9c9;
+  font-size: 0.875rem;
+}
+
+.footer-content .business-about .business-hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 19px 0 20px 0;
+}
+
+.footer-content .business-about .business-hours__title {
+  margin-right: 28.5px;
+  padding-top: 4.5px;
+}
+
+.footer-content .business-about .business-hours__detail {
+  list-style: none;
+  border-left: thick solid #c9c9c9;
+  border-width: 2px;
+  padding: 4.5px 0 0 28.5px;
+}
+
+.footer-content .business-about .business-hours__detail li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 19px;
+}
+
+.footer-content .business-about .business-hours__detail li .day {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(80%, #99e5a5));
+  background: linear-gradient(transparent 50%, #99e5a5 80%);
+  margin-right: 23px;
+}
+
+.footer-content .business-about .business-hours__detail li .am {
+  margin-right: 16px;
+}
+
+.footer-content .business-about .business-hours__detail li:nth-child(3) {
+  margin-bottom: 10px;
+}
+
+.footer-content .business-about .closed-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 29px;
+  margin-bottom: 19px;
+}
+
+.footer-content .copyright {
+  font-size: 11px;
+  text-align: right;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
